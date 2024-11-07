@@ -1,0 +1,8 @@
+a {
+    color: white;
+    text-decoration: none;
+    &.active {
+        color: orange;
+        text-decoration: underline;
+    }
+}

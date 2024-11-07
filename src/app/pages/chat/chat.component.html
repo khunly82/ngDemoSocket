@@ -1,0 +1,14 @@
+<div class="grid">
+    @for(message of messages; track $index) {
+        <div class="col-7 p-3" [ngClass]="{ 'col-offset-5': message.author === 'Khun' }">
+            <p-card [header]="message.author" 
+                    subheader="{{message.date | date : 'hh:mm:ss'}}">
+                {{ message.content }}
+            </p-card>
+        </div>
+    } 
+</div>
+<div>
+    <input pInputText [(ngModel)]="newMessage">
+    <p-button icon="pi pi-send" (onClick)="sendMessage()"></p-button>
+</div>
